@@ -2,6 +2,9 @@
 
 const fsP = require("fs/promises");
 
+/** takes in a file path and returns its contents
+ * or catches error
+ */
 async function cat(path) {
   try {
     const contents = await fsP.readFile(path, 'utf8')
